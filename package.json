@@ -4,7 +4,7 @@
   "description": "Acceptance Tests for Accelya",
   "main": "index.js",
   "scripts": {
-    "test:api": "newman run API_TESTS.postman_collection.json -e environment.json"
+    "test:api": "newman run API_TESTS.postman_collection.json -e environment.json --reporter-junit-export"
   },
   "repository": {
     "type": "git",
