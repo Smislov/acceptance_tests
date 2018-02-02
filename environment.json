@@ -1,0 +1,17 @@
+{
+  "id": "3a1b15a3-9404-a745-6fac-af295570df3d",
+  "name": "ECSB00100EA6",
+  "values": [
+    {
+      "key": "hostname",
+      "value": "ECSB00100EA6",
+      "description": "",
+      "type": "text",
+      "enabled": true
+    }
+  ],
+  "timestamp": 1517568769903,
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2018-02-02T11:24:23.321Z",
+  "_postman_exported_using": "Postman/5.5.1"
+}

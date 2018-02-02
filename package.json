@@ -1,0 +1,22 @@
+{
+  "name": "acceptance",
+  "version": "1.0.0",
+  "description": "Acceptance Tests for Accelya",
+  "main": "index.js",
+  "scripts": {
+    "test:api": "newman run API_TESTS.postman_collection.json -e environment.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Smislov/acceptance_tests.git"
+  },
+  "author": "Smilen Monev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Smislov/acceptance_tests/issues"
+  },
+  "homepage": "https://github.com/Smislov/acceptance_tests#readme",
+  "dependencies": {
+    "newman": "^3.9.3"
+  }
+}

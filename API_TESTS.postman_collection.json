@@ -1,0 +1,43 @@
+{
+	"id": "de1a72f4-60cc-7c3f-ab1d-efa53e609b7f",
+	"name": "API_TESTS",
+	"description": "",
+	"order": [
+		"ab723ba1-cc28-dda5-69d2-c21c4b44b900"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1517568486629,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "ab723ba1-cc28-dda5-69d2-c21c4b44b900",
+			"headers": "x-tenant: AY\n",
+			"headerData": [
+				{
+					"key": "x-tenant",
+					"value": "AY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://{{hostname}}:8020/services/refdata/common/geography/airports/LHR",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"Airport Code is LHR\"] = jsonData.airport.airportCode === \"LHR\";\ntests[\"Airport Name is Heathrow Airport\"] = jsonData.airport.airportName === \"Heathrow Airport\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1517569459487,
+			"name": "Get specific Airport",
+			"description": "",
+			"collectionId": "de1a72f4-60cc-7c3f-ab1d-efa53e609b7f",
+			"responses": []
+		}
+	]
+}
