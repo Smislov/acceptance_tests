@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_TESTS" time="0.947">
+  <testsuite name="Get specific Airport" id="9026ade2-f92f-4bc8-81e9-a1278c878351" tests="3" time="0.947">
+    <testcase name="Status code is 200" time="0.947">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+    <testcase name="Airport Code is LHR" time="0.947"/>
+    <testcase name="Airport Name is Heathrow Airport" time="0.947"/>
+  </testsuite>
+</testsuites>

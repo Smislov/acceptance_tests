@@ -1,0 +1,7 @@
+{
+    "host": "10.253.129.218",
+    "port": "5432",
+    "user": "postgres",
+    "password": "pwd123",
+    "database": "mrcrdig"
+}
