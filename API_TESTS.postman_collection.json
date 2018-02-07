@@ -30,7 +30,7 @@
 			"method": "GET",
 			"data": [],
 			"dataMode": "params",
-			"tests": "tests[\"Status code is 200\"] = responseCode.code === 301;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"Airport Code is LHR\"] = jsonData.airport.airportCode === \"LHR\";\ntests[\"Airport Name is Heathrow Airport\"] = jsonData.airport.airportName === \"Heathrow Airport\";",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"Airport Code is LHR\"] = jsonData.airport.airportCode === \"LHR\";\ntests[\"Airport Name is Heathrow Airport\"] = jsonData.airport.airportName === \"Heathrow Airport\";",
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1517569459487,
