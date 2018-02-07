@@ -11,11 +11,10 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      'args': ['disable-infobars']
+      'args': ['disable-infobars',"--headless"]
     }
   },
   chromeOnly: true,
-  chromeDriver: `./node_modules/webdriver-manager/selenium/chromedriver_2.35${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
   directConnect: true,
   baseUrl: 'http://10.253.129.218:8080/refdata/#/ref-data',
   framework: 'jasmine',
