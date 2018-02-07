@@ -3,6 +3,7 @@
 
 const { SpecReporter } = require('jasmine-spec-reporter');
 
+
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
@@ -11,9 +12,12 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      'args': ['disable-infobars','--headless','--window-size=1920,1080','start-maximized']
+      'args': ['disable-infobars'
+      ,'--headless','--window-size=1920,1080','start-maximized'
+    ]
     }
   },
+  //chromeDriver: `./node_modules/webdriver-manager/selenium/chromedriver_2.35${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
   chromeOnly: true,
   directConnect: true,
   baseUrl: 'http://10.253.129.218:8080/refdata/#/ref-data',
@@ -27,6 +31,12 @@ exports.config = {
     require('ts-node').register({
       project: 'e2e/tsconfig.e2e.json'
     });
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+    var jasmineReporters = require('jasmine-reporters');
+    jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+        consolidateAll: true,
+        savePath: '',
+        filePrefix: 'xml_refdata_output'
+    }));
+    //jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }
 };
