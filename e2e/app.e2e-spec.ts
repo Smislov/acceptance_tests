@@ -12,8 +12,6 @@ describe('ref-data-app App', () => {
     page.navigateTo();
     page.windowMaxSize();
     browser.waitForAngular();
-    
-    
   });
 
   it('Should open Reference Data app', () => {
