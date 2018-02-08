@@ -10,7 +10,6 @@ function sendValue(element: ElementFinder, text: string) {
 export class RefDataAppPage {
 
   navigateTo() {
-    browser.waitForAngular();
     return browser.get('/refdata/#/ref-data');
   }
 
