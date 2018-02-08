@@ -5,20 +5,19 @@ const { SpecReporter } = require('jasmine-spec-reporter');
 
 
 exports.config = {
-  allScriptsTimeout: 15000,
-  restartBrowserBetweenTests: true,
-  rootElement: '.ion-app',
+  allScriptsTimeout: 5000,
   specs: [
     './e2e/**/*.e2e-spec.ts'
   ],
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      'args': ['disable-infobars','incognito','--headless','--window-size=1920,1080','start-maximized'
+      'args': ['disable-infobars'
+      //,'--headless','--window-size=1920,1080','start-maximized'
     ]
     }
   },
-  //chromeDriver: `./node_modules/webdriver-manager/selenium/chromedriver_2.35${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
+  chromeDriver: `./node_modules/webdriver-manager/selenium/chromedriver_2.35${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
   chromeOnly: true,
   directConnect: true,
   baseUrl: 'http://10.253.129.218:8080/refdata/#/ref-data',
