@@ -10,8 +10,8 @@ describe('ref-data-app App', () => {
   beforeEach(() => {
     page = new RefDataAppPage();
     page.navigateTo();
-    page.windowMaxSize();
     browser.waitForAngular();
+    page.windowMaxSize();
   });
 
   it('Should open Reference Data app', () => {
