@@ -5,14 +5,15 @@ const { SpecReporter } = require('jasmine-spec-reporter');
 
 
 exports.config = {
-  allScriptsTimeout: 11000,
+  allScriptsTimeout: 15000,
+  useAllAngular2AppRoots: true,
   specs: [
     './e2e/**/*.e2e-spec.ts'
   ],
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      'args': ['disable-infobars'
+      'args': ['disable-infobars','incognito'
       ,'--headless','--window-size=1920,1080','start-maximized'
     ]
     }

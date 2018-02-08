@@ -10,12 +10,14 @@ describe('ref-data-app App', () => {
   beforeEach(() => {
     page = new RefDataAppPage();
     page.navigateTo();
-    browser.waitForAngular();
     page.windowMaxSize();
+    browser.waitForAngular();
+    
+    
   });
 
-  it('Should open Reference Data app', () => {   
-    expect(page.getTitle()).toEqual('Reference Data')
+  it('Should open Reference Data app', () => {
+    expect(page.getTitle()).toEqual('Reference Data');
   });
 
   it('Should login to Ref Data', () => {
