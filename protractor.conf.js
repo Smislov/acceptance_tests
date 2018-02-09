@@ -2,6 +2,8 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
+let json = require('./environment.json');
+
 
 
 exports.config = {
@@ -14,14 +16,14 @@ exports.config = {
     'browserName': 'chrome',
     'chromeOptions': {
       'args': ['disable-infobars'
-      ,'--headless','--window-size=1920,1080','start-maximized'
+     ,'--headless','--window-size=1920,1080','start-maximized'
     ]
     }
   },
-  chromeDriver: `./node_modules/webdriver-manager/selenium/chromedriver_2.35${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
+  //chromeDriver: `./node_modules/webdriver-manager/selenium/chromedriver_2.35${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
   chromeOnly: true,
   directConnect: true,
-  baseUrl: 'http://10.253.129.218:8080/refdata/#/ref-data',
+  baseUrl: `http://${json.name}:8080/refdata/#/ref-data`,
   framework: 'jasmine',
    jasmineNodeOpts: {
     showColors: true,
