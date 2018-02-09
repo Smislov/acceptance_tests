@@ -1,10 +1,10 @@
 {
   "id": "3a1b15a3-9404-a745-6fac-af295570df3d",
-  "name": "10.253.129.218",
+  "name": "",
   "values": [
     {
       "key": "hostname",
-      "value": "10.253.129.218",
+      "value": "",
       "description": "",
       "type": "text",
       "enabled": true
