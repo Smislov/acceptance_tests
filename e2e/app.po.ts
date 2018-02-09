@@ -33,6 +33,7 @@ export class RefDataAppPage {
   }
 
   logoutFromRefData() {
+    browser.ignoreSynchronization = true;
     let user = $('.mcf-header-user-details');
     browser.wait(until.presenceOf(user), 5000);
     user.click();
@@ -41,6 +42,7 @@ export class RefDataAppPage {
     logoutBtn.click();
     let loginModal = $('.mcf-modal-container');
     browser.wait(until.presenceOf(loginModal), 5000);
+    browser.ignoreSynchronization = false;
     return loginModal.isPresent();
   }
 
