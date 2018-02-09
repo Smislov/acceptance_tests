@@ -9,6 +9,7 @@ exports.config = {
   specs: [
     './e2e/**/*.e2e-spec.ts'
   ],
+  useAllAngular2AppRoots: true,
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
@@ -17,7 +18,7 @@ exports.config = {
     ]
     }
   },
-  //chromeDriver: `./node_modules/webdriver-manager/selenium/chromedriver_2.35${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
+  chromeDriver: `./node_modules/webdriver-manager/selenium/chromedriver_2.35${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
   chromeOnly: true,
   directConnect: true,
   baseUrl: 'http://10.253.129.218:8080/refdata/#/ref-data',
