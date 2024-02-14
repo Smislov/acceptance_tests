@@ -11,6 +11,7 @@
 var VERSION = '9.0.6';
 var test;
 var test2;
+var test3;
 var p = console.warn;
 var util = require('util');
 var assert = require('assert');
